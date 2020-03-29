@@ -10,12 +10,13 @@ namespace IA.Models
 {
     public class Product
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
         public float price { get; set; }
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
         public string description { get; set; }
         [ForeignKey("category")]
         public int category_id { get; set; }

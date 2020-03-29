@@ -179,6 +179,10 @@
     <Compile Include="Migrations\202003250444433_firstMigration.designer.cs">
       <DependentUpon>202003250444433_firstMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003280643544_update.cs" />
+    <Compile Include="Migrations\202003280643544_update.designer.cs">
+      <DependentUpon>202003280643544_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />
@@ -208,8 +212,9 @@
     <Content Include="Views\Content\error.cshtml" />
     <Content Include="Views\Content\news.cshtml" />
     <Content Include="Views\Product\AddProduct.cshtml" />
-    <Content Include="Views\Product\Error.cshtml" />
     <Content Include="Views\Product\Done.cshtml" />
+    <Content Include="Views\Product\creation_error.cshtml" />
+    <Content Include="Views\Product\No_Image.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -223,6 +228,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003250444433_firstMigration.resx">
       <DependentUpon>202003250444433_firstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003280643544_update.resx">
+      <DependentUpon>202003280643544_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

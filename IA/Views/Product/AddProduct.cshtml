@@ -1,6 +1,5 @@
-﻿@using IA.Models
-@model IA.Models.Product
-@model IA.Models.Category
+﻿@using System.Web.Mvc.Html
+@using IA.Models
 @{
     ViewBag.Title = "AddProduct";
     Layout = "~/Views/shared/_MyLayout.cshtml";
@@ -18,68 +17,49 @@
             <div class="container">
                 <h3>Account</h3>
                 <form action="Creation" method="post">
-                    <div class="col-md-7 account-top">
-                        <form>
-                            <div>
-                                <span>Image</span>
-                                <input type="text" name="Image ">
-                            </div>
+                <div class="col-md-7 account-top">
+                         <form>
+
+                             <div>
+                                 <span>Image</span>
+                                 <input type="file" name="Image " id="Image" value="Browse" class="btn-info" />
+                             </div>
+
+                        <div>
+                            <span>Name*</span>
+                            <input type="text" name="Name" placeholder=" Name" required="">
+                        </div>
 
 
-                            <div>
-                                <span>Name*</span>
-                                <input type="text" name="Name" placeholder=" Name" required="">
-                            </div>
+                        <div>
+                            <span>price*</span>
+                            <input type="text" name="Price" placeholder="price" required="">
+                        </div>
+
+                        <div>
+                            <span>Description</span>
+                            <textarea name="Description" placeholder="Description"></textarea>
+                        </div>
+
+                        <div>
+                            <span>Category* </span>
+                            <select id="Category" name="category_id" required="">
+                                <option class="cat-item cat-item-42" name="category_id" value="1"> <span class="count">Digital </span></option>
+                                <option class="cat-item cat-item-42" name="category_id" value="2"> <span class="count">Quartz </span></option>
+                                <option class="cat-item cat-item-63" name="category_id" value="3"> <span class="count">Touchscreen </span></option>
+                            </select>
+                        </div>
 
 
-                            <div>
-                                <span>price*</span>
-                                <input type="text" name="Price" placeholder="price" required="">
-                            </div>
-
-                            <div>
-                                <span>Description</span>
-                                <textarea name="Description" placeholder="Description"></textarea>
-                            </div>
+                        <input type="submit" value="Add">
+                    </form>
 
 
-
-
-                            <div class="col-md-10">
-                                
-                                @Html.DropDownListFor(Category => Model.Id, (SelectList)ViewBag.Author_id, new { @class = "form-control" })
-
-                                @Html.ValidationMessageFor(Category => Model.Id, "", new { @class = "text-danger" })
-                            </div>
-                            <input type="submit" value="Add">
-                        </form>
-
-
-                    </div>
+                </div>
 
                     <div class="clearfix"> </div>
             </div>
         </div>
 
-        <div>
-            <span>Category* </span>
-            <select id="Category" name="categoryName" required="">
-                <option class="cat-item cat-item-42"> <span class="count">Digital </span></option>
-                <option class="cat-item cat-item-42"> <span class="count">Quartz </span></option>
-                <option class="cat-item cat-item-63"> <span class="count">Touchscreen </span></option>
-            </select>
-        </div>
 
 
-        <div>
-            <span>category_id*</span>
-            <input type="integer" name="category_id" placeholder=" category_id" required="">
-        </div> public Product categoryNum(Product product)
-        {
-
-        if ()
-        {
-        product.category_id = 1;
-        }
-        return(product);
-        }
