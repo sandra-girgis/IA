@@ -215,6 +215,7 @@
     <Content Include="Views\Product\Done.cshtml" />
     <Content Include="Views\Product\creation_error.cshtml" />
     <Content Include="Views\Product\No_Image.cshtml" />
+    <Content Include="Views\Product\Product.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -224,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003250444433_firstMigration.resx">

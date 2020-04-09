@@ -9,7 +9,7 @@ namespace IA.Controllers
     public class ContentController : Controller
     {
         // GET: Content
-        public ActionResult men()
+        public ActionResult Men()
         {
             return View();
         }
@@ -19,7 +19,7 @@ namespace IA.Controllers
             return View("single");
         }
 
-        public ActionResult news()
+        public ActionResult News()
         {
              return View();
         }

@@ -1,0 +1,44 @@
+﻿@model IA.Models.Product
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/shared/_MyLayout.cshtml";
+}
+<hr />
+<table class="dl-horizontal" align="center">
+    <tr>
+        <td>
+            <h1>@Html.DisplayFor(model => model.Name)</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2>
+                @Html.DisplayFor(model => model.price)
+                @Html.DisplayFor(model => model.category.Name)
+            </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div>
+                <img src="@Url.Content(Model.Image)" width="250" height="250"/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h2>
+                @Html.DisplayFor(model => model.description)
+            </h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>
+                @Html.ActionLink("Update", "AddProduct", new { id = Model.Id }) |
+                @Html.ActionLink("Delete", "Delete")
+            </h3>
+        </td>
+    </tr>
+</table>
